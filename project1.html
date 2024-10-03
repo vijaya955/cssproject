@@ -1,0 +1,1097 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* Media Queries for Mobile View */
+@media (max-width: 768px) {
+    /* General Styles */
+    .container {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .aa {
+        flex-direction: column;
+        gap: 10px;
+        margin-right: 0;
+        justify-content: center;
+    }
+
+    .carousel {
+        flex-direction: column;
+    }
+
+    .carousel-item {
+        width: 100%;
+        height: auto;
+    }
+
+    /* Card Layout Adjustments */
+    .cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+
+    .pricing-table {
+        flex-direction: column;
+    }
+
+    .pricing-card {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+
+    /* Contact Section */
+    .footer .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer .footer-content div {
+        width: 100%;
+        padding: 0;
+        margin-bottom: 20px;
+    }
+    
+    .footer .footer-bottom {
+        padding: 10px 0;
+    }
+
+    /* Search Bar */
+    .search-bar {
+        flex-direction: column;
+        margin-left: 0;
+    }
+
+    .search-bar input, .search-bar button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    /* Services Section */
+    .services {
+        flex-direction: column;
+    }
+
+    .service-item {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    /* Accordion in Content Right Section */
+    .content {
+        flex-direction: column;
+    }
+
+    .content-left, .content-right {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+/* Media Query for Tablet View */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    /* Adjust container padding */
+    .container {
+        padding: 10px;
+        max-width: 95%;
+    }
+
+    /* Flex Layouts */
+    .aa {
+        flex-direction: column;
+        gap: 10px;
+        align-items: flex-start;
+        margin-right: 10px;
+    }
+
+    .carousel {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .carousel-item {
+        width: 150px;
+        height: 150px;
+    }
+
+    /* Cards Section */
+    .cards {
+        flex-direction: column;
+    }
+
+    .card {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    /* Service Section */
+    .services {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .service-item {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .content {
+        flex-direction: column;
+    }
+
+    .content-left, .content-right {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    /* Pricing Table */
+    .pricing-table {
+        flex-direction: column;
+    }
+
+    .pricing-card {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    /* Footer */
+    .footer .footer-content {
+        flex-direction: column;
+    }
+
+    .footer .footer-content div {
+        margin-bottom: 20px;
+    }
+
+    /* Adjust fonts */
+    .pricing-card .card-header h2 {
+        font-size: 14px;
+    }
+
+    .service-item h4, .pricing-card .card-body ul li {
+        font-size: 12px;
+    }
+
+    .pricing-header h1, .pricing-header p {
+        font-size: 16px;
+    }
+}
+@media only screen and (min-width: 1024px) {
+  .container {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .aa {
+    justify-content: space-between;
+    margin-right: 50px;
+    gap: 10px;
+  }
+
+  .carousel-item {
+    width: 250px;
+    height: 250px;
+  }
+
+  .card {
+    width: 28%;
+  }
+
+  .service-item {
+    width: 31%;
+  }
+
+  .pricing-table {
+    flex-direction: row;
+  }
+
+  .pricing-card {
+    width: 280px;
+  }
+
+  .content {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .content-left, .content-right {
+    width: 48%;
+  }
+
+  .accordion-item h4 {
+    font-size: 18px;
+  }
+}
+
+/* Additional media query for larger laptops or desktops (above 1280px) */
+@media only screen and (min-width: 1280px) {
+  .container {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .aa {
+    margin-right: 80px;
+    gap: 20px;
+  }
+
+  .carousel-item {
+    width: 300px;
+    height: 300px;
+  }
+
+  .card {
+    width: 30%;
+  }
+
+  .service-item {
+    width: 32%;
+  }
+
+  .pricing-card {
+    width: 300px;
+  }
+
+  .content-left, .content-right {
+    width: 50%;
+  }
+}
+
+  /* header */
+  .container{
+    height:100vh;
+    width: 100vw;
+    font-family: Arial;
+  }
+  .e1 {
+    margin-left:10px;
+  }
+  .aa {
+    display: flex;
+    gap: 20px;
+    justify-content: space-around;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    align-items: center;
+    float: right;
+    font-size: medium;
+    line-height: 40px;
+    margin-right: 20px;
+  }
+  a{
+    color: black;
+  }
+  .p {
+    text-align: center;
+  }
+  hr{
+    background-color: blue;
+  }
+  .a5 {
+    background-color: royalblue;
+    color: white;
+    height: 40px;
+    width: 150px;
+  }
+  .a3 {
+    top:30%;
+    margin-left: 150px;
+    color: white;
+    font-size: larger;
+    font-family: sans-serif;
+  }
+  .a4 {
+    position: absolute;
+    top: 50%;
+    margin-left: 150px;
+    color: white;
+    font-size: medium;
+    font-family: sans-serif;
+  }
+  .a5 {
+    position: absolute;
+    top: 60%;
+    margin-left:50px;
+    color: white;
+    font-size: medium;
+    font-family: sans-serif;
+    border: none;
+  }
+  .search-bar {
+    display: flex;
+    margin-top: 63px;
+    margin-left: 100px;
+    top:50%;
+  }
+  .search-bar input, .search-bar button {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin: 0 5px;
+  }
+  .search-bar button {
+    background: #007bff;
+    color: #fff;
+    border: none;
+  }
+    /* images */
+    .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+        .title {
+            color: #007bff;
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+        .subtitle {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .carousel {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+        }
+        .carousel-item {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            overflow: hidden;
+            border-radius: 10px;
+        }
+        .carousel-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .carousel-item .info {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            padding: 10px;
+            font-size:10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .carousel-item .info .listings {
+            font-size: 12px;
+        }
+        .carousel-item .info .icon {
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            padding: 5px;
+        }
+        .dots {
+            margin-top: 20px;
+        }
+        .dot {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            background-color: #ddd;
+            border-radius: 50%;
+            margin: 0 5px;
+        }
+        .dot.active {
+            background-color: #007bff;
+        }
+        /* cards */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f7fa;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height:80vh;
+        }
+        .container {
+            text-align: center;
+            max-width:1000px;
+            margin: 0 auto;
+        }
+        .header {
+            color: #007bff;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+        .title {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 40px;
+        }
+        .cards {
+            display: flex;
+            justify-content: space-between;
+        }
+        .card {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 30%;
+            text-align: left;
+            overflow: hidden;
+        }
+        .card img {
+            width: 100%;
+            height: auto;
+        }
+        .card-content {
+            padding: 20px;
+        }
+        .card-content h3 {
+            font-size:16px;
+            margin: 0 0 10px;
+            color: #333;
+        }
+        .card-content p {
+            font-size:10px;
+            color: #777;
+            margin: 0 0 20px;
+        }
+        .card-content .category {
+            font-size:10px;
+            color: #007bff;
+            margin-bottom: 10px;
+        }
+        .card-footer {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+            border-top: 1px solid #f0f0f0;
+        }
+        .card-footer button {
+            background-color: #fff;
+            border: 1px solid darkgray;
+            color:darkgray;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size:10px;
+        }
+        .card-footer button:hover {
+            background-color: #007bff;
+            color: #fff;
+        }
+        .stars {
+            color: #f39c12;
+            margin-bottom: 10px;
+        }
+        /* our services */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .section-title h2 {
+            color: #007bff;
+            font-size: 13px;
+            margin: 0;
+        }
+        .section-title h1 {
+            font-size:22px;
+            margin: 10px 0 0;
+        }
+        .services {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 40px;
+        }
+        .service-item {
+            background: #fff;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+            width: 30%;
+        }
+        .service-item h4 {
+            font-size:14px;
+            margin-bottom: 10px;
+        }
+        .service-item pre {
+            font-size:13px;
+            color:darkgray;
+            font-family: Verdana;
+        }
+        .content {
+            display: flex;
+            justify-content: space-between;
+        }
+        .content-left, .content-right {
+            background: #fff;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 20px;
+            width: 48%;
+        }
+        .content-left h3 {
+            font-size:20px;
+            margin-bottom: 10px;
+            font-family:'Franklin Gothic Medium';
+        }
+        .content-left pre {
+            font-size:10px;
+            color:darkgray;
+            font-family: Verdana;
+            margin-bottom: 20px;
+        }
+        .content-left a {
+            display: inline-block;
+            background: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 4px;
+            text-decoration: none;
+        }
+        .content-right .accordion {
+            border-top: 1px solid #e0e0e0;
+        }
+        .accordion-item {
+            border-bottom: 1px solid #e0e0e0;
+        }
+        .accordion-item h4 {
+            font-size: 16px;
+            margin: 0;
+            padding: 10px;
+            cursor: pointer;
+            background: #f8f9fa;
+        }
+        /* plan */
+      body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+        }
+        .pricing-header {
+            margin-top: 50px;
+        }
+        .pricing-header h1 {
+            color: #007bff;
+            font-size:15px;
+        }
+        .pricing-header p {
+            color: #333;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .pricing-table {
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+        }
+        .pricing-card {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 0 10px;
+            width: 300px;
+        }
+        .pricing-card .card-header {
+            background-color: #007bff;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            color: #fff;
+            padding: 20px;
+        }
+        .pricing-card .card-header h2 {
+            margin: 0;
+            font-size:15px;
+            color:white;
+        }
+        .pricing-card .card-header p {
+            margin: 10px 0 0;
+            font-size:25px;
+            font-weight: bold;
+        }
+        .pricing-card .card-header span {
+            font-size: 10px;
+        }
+        .pricing-card .card-body {
+            padding: 20px;
+        }
+        .pricing-card .card-body ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .pricing-card .card-body ul li {
+            margin-left:40px ;
+            color: #333;
+            font-family:'Times New Roman';
+        }
+        .pricing-card .card-footer {
+            padding: 20px;
+        }
+        .pricing-card .card-footer button {
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            color: #fff;
+            cursor: pointer;
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+        /* contact */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+        .contact-us {
+            margin-top: 50px;
+        }
+        .contact-us a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        .contact-us h1 {
+            font-size: 24px;
+            margin: 10px 0;
+        }
+        .contact-us button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .footer {
+            background-color: #fff;
+            padding: 40px 0;
+            border-top: 1px solid #e9ecef;
+        }
+        .footer .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .footer .footer-content div {
+            flex: 1;
+            padding: 0 20px;
+        }
+        .footer .footer-content div h3 {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        .footer .footer-content div p {
+            font-size: 14px;
+            line-height: 1.6;
+        }
+        .footer .footer-content div ul {
+            list-style: none;
+            padding: 0;
+        }
+        .footer .footer-content div ul li {
+            margin-bottom: 10px;
+        }
+        .footer .footer-content div ul li a {
+            color: #007bff;
+            text-decoration: none;
+            font-size: 14px;
+        }
+        .footer .footer-content .social-icons {
+            margin-top: 20px;
+        }
+        .footer .footer-content .social-icons a {
+            color: #6c757d;
+            margin-right: 10px;
+            font-size: 18px;
+            text-decoration: none;
+        }
+        .footer .footer-bottom {
+            text-align: center;
+            padding: 20px 0;
+            background-color: #f1f1f1;
+            font-size: 14px;
+        }
+        .footer .footer-bottom a {
+            color: #007bff;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+  <!-- header -->
+   <div class="container">
+    <div class="e1">
+      <img src="./logo.png"></div>
+      <div class="aa">
+        <a style="text-decoration: none" href="">Popular</a>
+        <a style="text-decoration: none" href="">Most Visited</a>
+        <a style="text-decoration: none" href="">Blog Entries</a>
+        <a style="text-decoration: none" href="">Our Services</a>
+        <a style="text-decoration: none" href="">Contact Us</a>
+      </div>
+    <div class="container1">
+      <img src="main_banner.jpg" />
+      <div class="a2">
+        <div class="a3">
+          <hr />
+          Best Finder For You
+        </div>
+        <div class="a4">
+          Suspendisse eu lorem massa.Integer sit amet posuere tellus.
+        </div>
+        <button class="a5">Discover More</button>
+        <input placeholder="Your name" type="text" />
+        <input placeholder="Type location" type="text" />
+        <input placeholder="Hotels" type="text" />
+        <button>Search Now</button>
+      </div>
+      <br />
+      <!-- images -->
+      <div class="container">
+        <div class="title">Popular Places</div>
+        <div class="subtitle">Integer sapien odio</div>
+        <div class="carousel">
+            <div class="carousel-item">
+                <img src="./popular_item_1.jpg" alt="A person standing on a mountain with a scenic background">
+                <div class="info">
+                    <div>Mauris tempus</div>
+                    <div class="listings">76 listings</div>
+                    <div class="icon"><i class="fas fa-plus"></i></div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="./popular_item_2.jpg" alt="A person wearing sunglasses and smiling">
+                <div class="info">
+                    <div>Aenean dolor</div>
+                    <div class="listings">58 listings</div>
+                    <div class="icon"><i class="fas fa-plus"></i></div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="./popular_item_3.jpg" alt="Fireworks in the night sky">
+                <div class="info">
+                    <div>Nunc at quam</div>
+                    <div class="listings">65 listings</div>
+                    <div class="icon"><i class="fas fa-plus"></i></div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="./popular_item_4.jpg" alt="A group of people holding balloons">
+                <div class="info">
+                    <div>Fusce ac turpis</div>
+                    <div class="listings">66 listings</div>
+                    <div class="icon"><i class="fas fa-plus"></i></div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="./popular_item_5.jpg" alt="A person holding a red smoke flare">
+                <div class="info">
+                    <div>Lorem ipsum</div>
+                    <div class="listings">82 listings</div>
+                    <div class="icon"><i class="fas fa-plus"></i></div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="./popular_item_5.jpg" alt="A person standing on a mountain with a scenic background">
+                <div class="info">
+                    <div>Praesent nec</div>
+                    <div class="listings">76 listings</div>
+                    <div class="icon"><i class="fas fa-plus"></i></div>
+                </div>
+            </div>
+        </div>
+        <div class="dots">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+    </div>
+    <!-- cards -->
+    <div class="container">
+      <div class="header">Featured Places</div>
+      <div class="title">Praesent nec dui sed urna</div>
+      <div class="cards">
+          <div class="card">
+              <img src="./featured_item_1.jpg" alt="Person holding a camera">
+              <div class="card-content">
+                  <div class="stars">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                  </div>
+                  <h3>Lorem ipsum dolor</h3>
+                  <div class="category">Category One</div>
+                  <p>Vestibulum id est eu felis vulputate hendrerit. Suspendisse dapibus turpis in dui pulvinar imperdiet. Nunc consectetur.</p>
+              </div>
+              <div class="card-footer">
+                  <button>ADD TO FAVORITES</button>
+                  <button>CONTINUE READING</button>
+              </div>
+          </div>
+          <div class="card">
+              <img src="./featured_item_2.jpg" alt="Tall tower against a blue sky">
+              <div class="card-content">
+                  <div class="stars">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                  </div>
+                  <h3>Nullam nibh lacus</h3><div class="category">Category Two</div>
+                  <p>Maecenas sit amet quam ut orci pulvinar urna at, congue diam. Suspendisse eu lorem massa. Integer sit amet posuere.</p>
+              </div>
+              <div class="card-footer">
+                  <button>ADD TO FAVORITES</button>
+                  <button>CONTINUE READING</button>
+              </div>
+          </div>
+          <div class="card">
+              <img src="./featured_item_3.jpg" alt="Scenic view of mountains and a lake">
+              <div class="card-content">
+                  <div class="stars">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                  </div>
+                  <h3>Suspendisse semper non</h3>
+                  <div class="category">Category Three</div>
+                  <p>Praesent luctus gravida elementum. Proin fermentum neque facilisis semper pharetra. Sed vestibulum vehicula tincidunt.</p>
+              </div>
+              <div class="card-footer">
+                  <button>ADD TO FAVORITES</button>
+                  <button>CONTINUE READING</button>
+              </div>
+          </div>
+      </div>
+  </div><br>
+  <br>
+  <br>
+  <!-- our services -->
+  <div class="container">
+    <div class="section-title">
+        <h2>Our Services</h2>
+        <h1>Best Template Site</h1>
+    </div>
+    <div class="services">
+        <div class="service-item">
+            <img src="./service_icon_2.png">
+            <h4>High Quality Design</h4>
+<pre>Etiam vivamus nibh at lorem hendrerit porta non 
+  nec ligula. Donec hendrerit porttitor pretium. 
+        Suspendisse fermentum nunc risus.</pre>
+        </div>
+        <div class="service-item">
+            <img src="./service_icon_2.png">
+            <h4>Fully Customizable</h4>
+<pre>Vivamus nec vehicula felis, sit amet convallis ex. 
+  Aenean dolor risus, volutpat at tincidunt eget, 
+            placerat ac mauris.</pre>
+        </div>
+        <div class="service-item">
+            <img src="./service_icon_3.png">
+            <h4>Best HTML CSS Layout</h4>
+<pre>Praesent nec dui sed urna pharetra dapibus at ac 
+  elit. Aenean hendrerit metus leo, quis viverra 
+  purus condimentum nec.</pre>
+        </div>
+    </div>
+    <div class="content">
+        <div class="content-left">
+            <h3>In hac habitasse platea dictumst</h3>
+           <pre>
+   Aenean hendrerit metus leo, quis viverra purus condimentum nec. 
+      Pellentesque a sem semper, lobortis mauris non, varius urna. Quisque 
+sodales purus eu tellus fringilla.
+</pre>
+   <br>
+            <pre>
+         Mauris sit amet quam congue, pulvinar urna sit amet, congue diam. Suspendisse 
+   eu lorem massa. Integer at amet posuere tellus, id efficitur leo. In hac 
+habitasse platea dictumst.</pre>
+            <a href="#">Discover More</a>
+        </div>
+        <div class="content-right">
+            <div class="accordion">
+                <div class="accordion-item">
+                    <h4>Ut in dapibus ipsum</h4>
+  <pre>
+Nulla eget aliquet dui, vitae tincidunt nulla. Sed sagittis odio vitae 
+auctor volutpat. In semper orci neque, ut hendrerit mauris rutrum eget
+Integer consectetur neque eu enim dictum porta.Sed et risus ac
+sapien congue mattis.</pre>
+                </div>
+                <div class="accordion-item">
+                    <h4>Vivamus ligula metus</h4>
+                   </div>
+                <div class="accordion-item">
+                    <h4>Suspendisse dapibus</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</div><br>
+<br>
+<br>
+<!-- plan -->
+ <div class="pricing-header">
+  <h1>Pricing Tables</h1>
+  <p>Duis molestie ipsum id faucibus fermentum</p>
+</div>
+<div class="pricing-table">
+  <div class="pricing-card">
+    <div class="card-header">
+      <h2>Starter Plan</h2>
+      <p>$25</p>
+      <span>/monthly</span>
+    </div>
+    <div class="card-body">
+      <ul>
+        <li>100 Suspendisse dapibus</li><br>
+        <li>10x Paleo celiac enamel</li><br>
+        <li>Williamsburg organic post ironic</li><br>
+        <li>Helvetica pinterest yuccie</li><br>
+        <li>Plaid shabby chic godard</li><br>
+      </ul>
+    </div>
+    <div class="card-footer">
+      <button>Buy It Now</button>
+    </div>
+  </div>
+  <div class="pricing-card">
+    <div class="card-header">
+      <h2>Premium Plan</h2>
+      <p>$45</p>
+      <span>/monthly</span>
+    </div>
+    <div class="card-body">
+      <ul>
+        <li>200 Suspendisse dapibus</li><br>
+        <li>20x Paleo celiac enamel</li><br>
+        <li>Williamsburg organic post ironic</li><br>
+        <li>Helvetica pinterest yuccie</li><br>
+        <li>Plaid shabby chic godard</li><br>
+      </ul>
+    </div>
+    <div class="card-footer">
+      <button>Buy It Now</button>
+    </div>
+  </div>
+  <div class="pricing-card">
+    <div class="card-header">
+      <h2>Advanced Plan</h2>
+      <p>$85</p>
+      <span>/monthly</span>
+    </div>
+    <div class="card-body">
+      <ul>
+        <li>400 Suspendisse dapibus</li><br>
+        <li>40x Paleo celiac enamel</li><br>
+        <li>Williamsburg organic post ironic</li><br>
+        <li>Helvetica pinterest yuccie</li><br>
+        <li>Plaid shabby chic godard</li><br>
+      </ul>
+    </div>
+    <div class="card-footer">
+      <center><button>Buy It Now</button></center>
+    </div>
+  </div>
+</div>
+<br>
+<br>
+<!-- map -->
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3962.588294151611!2d-1.6223428899081818!3d6.697803621086287!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfdb96f349e85efd%3A0xb8d1e0b88af1f0f5!2sKumasi%20Central%20Market!5e0!3m2!1sen!2sin!4v1727675247327!5m2!1sen!2sin" width="1000" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+<!-- contact -->
+<div class="container">
+    <div class="contact-us">
+        <a href="#">Contact Us</a>
+        <h1>Vivamus nec vehicula felis</h1>
+        <button>Talk to us</button>
+    </div>
+    <br>
+<div class="footer">
+    <div class="footer-content">
+        <div class="f1">
+            <img src="./footer_logo.png" height="30" width="60">
+            <p>Mauris sit amet quam congue, pulvinar urna et, congue diam. Suspendisse eu lorem massa. Integer sit amet posuere tellus, id vehicula leo. In hac habitasse platea dictumst.</p>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+        <div>
+            <h3>Useful Links</h3>
+            <ul>
+                <li><a href="#">Help FAQs</a></li>
+                <li><a href="#">Register</a></li>
+                <li><a href="#">Login</a></li>
+                <li><a href="#">My Profile</a></li>
+                <li><a href="#">How it Works?</a></li>
+                <li><a href="#">More About Us</a></li>
+            </ul>
+            <ul>
+                <li><a href="#">Our Clients</a></li>
+                <li><a href="#">Partnerships</a></li>
+                <li><a href="#">Blog Entries</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </div>
+        <div>
+            <h3>Contact Information</h3>
+            <p>Praesent iaculis gravida elementum. Proin fermentum neque facilisis semper pharetra. Sed vestibulum vehicula tincidunt.</p>
+            <p>
+                Phone: <a href="tel:010-050-0550">010-050-0550</a><br>
+                Email: <a href="mailto:hi@company.co">hi@company.co</a><br>
+                Address: <a href="#">company.co</a>
+            </p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        Copyright © 2018 Company Name - Design <a href="#">Template Mo</a>
+    </div>
+</div>
+</div>
+</body>
+</html>
